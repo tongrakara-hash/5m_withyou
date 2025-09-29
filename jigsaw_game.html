@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกมต่อจิ๊กซอว์ ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* สไตล์เฉพาะสำหรับเกมจิ๊กซอว์ */
+        .selector-grid {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 25px;
+            /* ทำให้แน่ใจว่ารูปที่เลือกไม่ชนขอบ */
+            padding: 5px; 
+            border: 1px solid #eee; 
+            border-radius: 10px;
+        }
+        
+        /* สไตล์สำหรับรูปตัวอย่าง (Thumbnail) */
+        .image-choice {
+            width: 80px; /* ขนาดรูปตัวอย่าง */
+            height: 60px;
+            border: 3px solid transparent; /* เส้นขอบเริ่มต้น */
+            border-radius: 8px;
+            cursor: pointer;
+            transition: border-color 0.2s, transform 0.2s;
+            object-fit: contain;
+            /* ไม่ต้องมี padding แล้ว เพราะใส่ไปที่ grid แทน */
+        }
+        
+        .image-choice:hover {
+            transform: scale(1.05);
+        }
+        
+        /* สไตล์เมื่อรูปถูกเลือก */
+        .image-choice.selected {
+            border-color: #ff69b4; /* สีชมพูเมื่อถูกเลือก */
+            box-shadow: 0 0 8px rgba(255, 105, 180, 0.8);
+        }
+
+        /* เพิ่มสไตล์สำหรับ Jigsaw Container เพื่อให้แสดงผลได้ดี */
+        .jigsaw-container {
+            display: grid;
+            width: 100%;
+            max-width: 450px; /* ขนาดสูงสุดที่แนะนำ */
+            height: 450px; /* ควรให้ความสูงเท่ากับความกว้างเพื่อให้เป็นสี่เหลี่ยมจัตุรัส */
+            margin: 0 auto;
+            border: 3px solid #ccc;
+        }
+
+        .puzzle-piece {
+            border: 1px solid #fff; /* เส้นขอบสีขาวเล็กๆ ระหว่างชิ้น */
+            background-size: 300% 300%; /* สำหรับ 3x3 */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" style="max-width: 500px;">
+        <h2>เกมต่อจิ๊กซอว์รูปสกรู 🧩</h2>
+        
+        <p>เลือกรูปภาพที่ต้องการต่อจิ๊กซอว์:</p>
+        <div id="imageSelector" class="selector-grid">
+            </div>
+        
+        <p>เรียงชิ้นส่วนให้ถูกต้องนะ!</p>
+        
+        <div id="jigsawContainer" class="jigsaw-container">
+            </div>
+
+        <p id="jigsawMessage" class="jigsaw-message">คลิกที่รูปภาพเพื่อเริ่มเกม!</p>
+        
+        <a href="main_menu.html"><button style="margin-top: 20px;">⬅️ กลับหน้าหลัก</button></a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

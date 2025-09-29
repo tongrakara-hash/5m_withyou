@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พิเศษสำหรับคนพิเศษของฉัน 🎀</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, My Dear! 💕</h1>
+        <p>กดปุ่มตัวเลขเพื่อใส่วันพิเศษของเรา:</p>
+        
+        <div id="passwordDisplay" class="password-display"></div>
+        
+        <div class="numpad-grid">
+            <button class="numpad-key" data-key="1">1</button>
+            <button class="numpad-key" data-key="2">2</button>
+            <button class="numpad-key" data-key="3">3</button>
+            <button class="numpad-key" data-key="4">4</button>
+            <button class="numpad-key" data-key="5">5</button>
+            <button class="numpad-key" data-key="6">6</button>
+            <button class="numpad-key" data-key="7">7</button>
+            <button class="numpad-key" data-key="8">8</button>
+            <button class="numpad-key" data-key="9">9</button>
+            
+            <button class="numpad-key clear-key" data-key="C"><i class="fas fa-backspace"></i></button>
+            <button class="numpad-key" data-key="0">0</button>
+            
+            <button class="numpad-key login-key" data-key="L"><i class="fas fa-heart"></i></button>
+        </div>
+        
+        <p id="message" class="error hidden">รหัสลับไม่ถูกต้องนะ! ลองดูดีๆ สิ</p>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
